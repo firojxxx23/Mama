@@ -129,12 +129,11 @@ def emo(keyword, default="✨"):
 def get_short_service(service_name):
     name = str(service_name).lower().strip()
     return SERVICE_SHORTS.get(name, name[:2].upper())
-    def format_url(url):
-    url = url.strip()
-    if url and not url.startswith(('http://', 'https://', 'tg://')):
+   def format_url(url):
+        url = url.strip()
+        if url and not url.startswith(('http://', 'https://', 'tg://')):
         return 'https://' + url
-    return url
-
+        return url
 def extract_channel_username(url):
     if "t.me/" in url:
         parts = url.split("t.me/")
